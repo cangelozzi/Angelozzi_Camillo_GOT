@@ -1,37 +1,54 @@
 <!doctype html>
 <html>
-
 <head>
-  <meta charset="UTF-8">
-  <title>Angelozzi Camillo GOT - Video with ES6</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/reset.css" rel="stylesheet" type="text/css">
-  <link href="css/main.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>DOM Traversal</title>
+<link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
+<link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 
 <body>
-  <section class="wrapper">
-    <!-- video stuff here -->
+    <main>
 
-    <video muted poster="images/vid1_large.png">
+    <section id="imageContainer">
+    	<div id="houseImages"> <!-- add in all of the images to make a scrolling "banner" -->
+    		<img src="images/stark.jpg"/>
+    		<img src="images/baratheon.jpg"/>
+    		<img src="images/lannister.jpg"/>
+    		<img src="images/tully.jpg"/>
+    		<img src="images/greyjoy.jpg"/>
+    		<img src="images/arryn.jpg"/>
+        </div>
+    </section>
 
-      <!-- FYI....first ALWAYS mp4 for Mac -->
-      <source src="video/mini_1.mp4" type="video/mp4">
-      <source src="video/mini_1.webm" type="video/webm">
-      <source src="video/mini_1.ogg" type="video/ogg">
+    <nav id="bottomNav">
+    	<ul id="navList">
+        	<!-- custom data attribute, allowing to pass custom data https://developer.mozilla.org/en/docs/Web/API/HTMLElement/dataset -->
+            <li><div class="sigilContainer stark" data-offset="0"></div></li>
+            <li><div class="sigilContainer baratheon" data-offset="1"></div></li>
+            <li><div class="sigilContainer lannister" data-offset="2"></div></li>
+            <li><div class="sigilContainer tully" data-offset="3"></div></li>
+            <li><div class="sigilContainer greyjoy" data-offset="4"></div></li>
+            <li><div class="sigilContainer arryn" data-offset="5"></div></li>
+        </ul>
+    </nav>
 
-      <!-- src has a separate element, not as attribute -->
-      <p>Your browser does not support video. Use a better browser!</p>
+    <h1>clever tagline goes here</h1><!-- replace this with the house name -->
+
+    <p class="house-info"></p><!-- replace this with house details (github gist for details) -->
+</main>
+
+<section class="lightbox">
+    <span class="close-lightbox">x</span>
+    <!-- add video here with sources for fallback / standards -->
+
+    <video autoplay controls>
+      <source src="video/House-Stark.mp4" type="video/mp4">
+      <!-- CONVERT TO WEBM and OGG -->
 
     </video>
 
-    <button>PLAY</button>
-    <button>PAUSE</button>
-    <button>REWIND 5 sec</button>
-
-  </section>
-
-  <script src="js/main.js"></script>
+</section>
+<script src="js/main.js"></script>
 </body>
-
 </html>
