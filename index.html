@@ -1,21 +1,33 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Angelozzi Camillo GOT - Video with ES6</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/reset.css" rel="stylesheet" type="text/css">
-<link href="css/main.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <title>Angelozzi Camillo GOT - Video with ES6</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
   <section class="wrapper">
     <!-- video stuff here -->
-    
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/QwievZ1Tx-8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <video autoplay muted>
+
+      <!-- FYI....first ALWAYS mp4 for Mac -->
+      <source src="video/mini_1.mp4" type="video/mp4">
+      <source src="video/mini_1.webm" type="video/webm">
+      <source src="video/mini_1.ogg" type="video/ogg">
+
+      <!-- src has a separate element, not as attribute -->
+      <p>Your browser does not support video. Use a better browser!</p>
+
+    </video>
 
   </section>
 
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>

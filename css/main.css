@@ -27,3 +27,8 @@ body {
 .wrapper {
   text-align: center;
 }
+
+video {
+  /* scale video with page */
+  width: 100%;
+}
