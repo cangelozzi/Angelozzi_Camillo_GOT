@@ -35,7 +35,7 @@ main {
 	margin:0 auto;
 
 	/*uncomment below to hide house banners*/
-	/*overflow:hidden;*/
+	overflow:hidden;
 }
 
 #houseImages { position:relative; width:4000px; transition: all .5s; }

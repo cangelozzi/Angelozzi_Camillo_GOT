@@ -17,6 +17,7 @@
   const playPause = document.querySelector('.play-pause');
   const rWnd = document.querySelector('.rewind');
   const ffWd = document.querySelector('.forward');
+  const imageBanner = document.querySelector('#houseImages');
 
 
   // FUNCTION STACK
@@ -37,7 +38,16 @@
 
     vidPlayer.load();
     vidPlayer.play();
+
+    animateBanners(this.dataset.offset);
   }
+
+  // animate banners across the screen
+  function animateBanners(offset) {
+    // grab offset value and move it by 600px which is the picure size.
+    imageBanner.style.right = (offset * 600) + "px";
+  }
+
 
   function closeBox() {
     lightbox.classList.remove('show-lightbox');
