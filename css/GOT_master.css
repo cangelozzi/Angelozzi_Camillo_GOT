@@ -129,3 +129,27 @@ video {
 	border: thin solid #949393;
 }
 
+.controls {
+  margin-top: 1.5em;
+  border: 1px dashed white;
+}
+
+[data-icon]:not([data-icon:pause-circle]):not([data-icon:play-circle]) {
+  font-size: 2em;
+}
+
+[data-icon] {
+  font-size: 3em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.controls ul {
+  list-style: none;
+}
+
+.controls ul li {
+  display: inline-block;
+  padding: 0.1em;
+}
+
