@@ -21,6 +21,8 @@
         <img src="images/tully.jpg" />
         <img src="images/greyjoy.jpg" />
         <img src="images/arryn.jpg" />
+        <img src="images/targaryen.jpg" />
+        <img src="images/tyrell.jpg" />
       </div>
     </section>
 
@@ -45,10 +47,16 @@
         <li>
           <div class="sigilContainer arryn" data-offset="5"></div>
         </li>
+        <li>
+          <div class="sigilContainer targaryen" data-offset="6"></div>
+        </li>
+        <li>
+          <div class="sigilContainer tyrell" data-offset="7"></div>
+        </li>
       </ul>
     </nav>
 
-    <h1 id="changeMe">clever tagline goes here</h1>
+    <h1 id="changeMe">Game of Thrones - The Kingdoms</h1>
     <!-- replace this with the house name -->
 
     <p class="house-info"></p>
@@ -60,28 +68,34 @@
     <span class="close-lightbox">x</span>
     <!-- add video here with sources for fallback / standards -->
 
-    <video >
+    <video>
       <source src="video/House-Stark.mp4" type="video/mp4">
       <!-- CONVERT TO WEBM and OGG -->
+       <p>Your browser does not support mp4 video. Use a better browser!</p>
 
     </video>
 
     <div class="controls">
       <ul>
-        <li class="rewind">
-          <i class="fas fa-backward"></i>
+        <li class="rewindToStart">
+          <i class="fas fa-fast-backward"></i>
         </li>
         <li class="play-pause">
           <i class="fas fa-pause-circle"></i>
         </li>
-        <li class="forward">
-          <i class="fas fa-forward"></i>
-        </li>
+        <li><input type="range" id="clipBar" value="0"></li>
+        <li><p id="clipTiming">0:00 / 0:00</p></li>
+<!--        <li id="muteBtn">MUTE</li>-->
+        <li id="muteBtn"><i class="fas fa-volume-up"></i></li>
+        <li><i class="far fa-volume-mute" style="display: none;"></i></li>
+        <li><input type="range" id="volumeBar" value="1" min="0" max="1" step="0.1"></li>
       </ul>
+
     </div>
 
 
   </section>
+  <script src="js/houseDetails.js"></script>
   <script src="js/main.js"></script>
 </body>
 
