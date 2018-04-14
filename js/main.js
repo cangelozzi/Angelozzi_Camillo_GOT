@@ -62,6 +62,11 @@
     animateBanners(this.dataset.offset);
   }
 
+  // show house when mouseover on shields
+  function showHouse() {
+    animateBanners(this.dataset.offset);
+  }
+
   // show clip currentTime, Duration in m:s, move time range bar.
   function showTime() {
     // update range time location based on time
@@ -146,27 +151,28 @@
   // mute button with color change on it.
   function muteMe() {
     var theVolumeSVG = this.firstElementChild;
-    if(vidPlayer.muted) {
+    if (vidPlayer.muted) {
       vidPlayer.muted = false;
       theVolumeSVG.dataset.icon = "volume-up";
       volumeBar.value = 0.6;
       vidPlayer.volume = 0.6;
     } else {
       vidPlayer.muted = true;
-       theVolumeSVG.dataset.icon = "volume-off";
+      theVolumeSVG.dataset.icon = "volume-off";
       volumeBar.value = 0;
       vidPlayer.volume = 0;
     }
   }
-  
+
   // update volume with volume bar
   function changeVolume() {
     vidPlayer.volume = volumeBar.value;
   }
-  
+
 
   // ADD EVENT LISTENER STACK
   sigils.forEach(sigil => sigil.addEventListener('click', loadMovie));
+  sigils.forEach(sigil => sigil.addEventListener('mouseover', showHouse));
   closeLightbox.addEventListener('click', closeBox);
   vidPlayer.addEventListener('ended', closeBox);
   playPause.addEventListener('click', togglePlay);
