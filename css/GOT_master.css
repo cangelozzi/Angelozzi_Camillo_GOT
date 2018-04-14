@@ -59,7 +59,7 @@ main {
 
 #houseImages {
   position: relative;
-  width: 5000px;
+  width: 5800px;
   transition: all .5s;
 }
 
@@ -162,6 +162,14 @@ main {
 
 .tyrell:hover {
   background: url('../images/tyrell_shield_color.png');
+}
+
+.frey {
+  background: url('../images/frey-shield_bw.png');
+}
+
+.frey:hover {
+  background: url('../images/frey-shield.png');
 }
 
 /* ----- classes for transitions ----- */
